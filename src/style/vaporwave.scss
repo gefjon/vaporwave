@@ -113,12 +113,14 @@ $main-font: "Arial", sans-serif;
             }
         }
         .taskbar-button-border {
-            margin:5px;
-
+            margin-left: 4px;
+            width: 210px;
             .taskbar-button {
-                height:20px;
+                height:30px;
+                width: 200px;
                 padding:4px;
-                line-height: 20px;
+                line-height: 30px;
+                text-align:left;
             }
         }
     }
