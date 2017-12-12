@@ -76,6 +76,17 @@ $main-font: "Arial", sans-serif;
     }
 }
 
+.sunken-element-border {
+    display:inline-block;
+    border-left:2px solid $dark-grey;
+    border-top:2px solid $dark-grey;
+    border-right:2px solid #ffffff;
+    border-bottom:2px solid #ffffff;
+    .sunken-element {
+        display:table;
+        background-color: $light-grey;
+    }
+}
 
 #body-wrapper {
     position:absolute;
@@ -99,6 +110,7 @@ $main-font: "Arial", sans-serif;
         border-top:2px solid #ffffff;
         height:52px;
         padding:4px;
+        width:100%;
 
         .start-button {
             height:30px;
@@ -121,6 +133,23 @@ $main-font: "Arial", sans-serif;
                 padding:4px;
                 line-height: 30px;
                 text-align:left;
+            }
+        }
+        .clock-border {
+            float:right;
+            margin-right:8px;
+            width:110px;
+            height:40px;
+            .clock {
+                width:100px;
+                height:30px;
+                padding:4px;
+                vertical-align:middle;
+                .clock-text {
+                    line-height: normal;
+                    font-weight: normal;
+                    text-align:center;
+                }
             }
         }
     }

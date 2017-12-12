@@ -7,12 +7,17 @@ module.exports = {
   MakeTaskbar
 }
 
-function Taskbar (el, innerEl) {
+function Taskbar (el, innerEl, clock) {
   return {
     el,
     innerEl,
+    clock,
     addButton: function (button) {
-      this.innerEl.appendChild(button.el)
+      if (this.clock) {
+        this.innerEl.insertBefore(button.el, clock.el)
+      } else {
+        this.innerEl.appendChild(button.el)
+      }
     },
     addButtonForWindow: function (window) {
       let contents = document.createElement('div')
@@ -25,6 +30,28 @@ function Taskbar (el, innerEl) {
       this.addButton(buttonEl)
     }
   }
+}
+
+function Clock (el, textEl) {
+  return {
+    el,
+    textEl
+  }
+}
+
+function MakeClock () {
+  let el = utils.divWithClass('sunken-element-border')
+  utils.addClasses(el, ['clock-border'])
+  let innerEl = utils.divWithClass('sunken-element')
+  utils.addClasses(innerEl, ['clock'])
+  el.appendChild(innerEl)
+  let textEl = utils.divWithClass('sunken-element-text')
+  utils.addClasses(textEl, ['clock-text'])
+  innerEl.appendChild(textEl)
+  let clock = Clock(el, textEl)
+  textEl.appendChild(document.createTextNode('2:38 PM'))
+
+  return clock
 }
 
 function makeStartButton () {
@@ -49,7 +76,8 @@ function MakeTaskbar (parent) {
   let el = utils.divWithClass('taskbar-border')
   let innerEl = utils.divWithClass('taskbar')
   el.appendChild(innerEl)
-  let taskbar = Taskbar(el, innerEl)
+  let taskbar = Taskbar(el, innerEl, MakeClock())
+  innerEl.appendChild(taskbar.clock.el)
   taskbar.addButton(makeStartButton())
   parent.appendChild(el)
 
