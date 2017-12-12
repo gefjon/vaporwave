@@ -1,0 +1,26 @@
+{
+  "name": "vaporwave",
+  "version": "0.0.1",
+  "description": "This project uses [Typescript](https://www.typescriptlang.org/index.html), [Sass](http://sass-lang.com/) plus [Gnu Make](https://www.gnu.org/software/make/) to handle compilation.",
+  "main": "none",
+  "bin": {
+    "vaporwave": "script.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gefjon/vaporwave.git"
+  },
+  "author": "Arthur Goldman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gefjon/vaporwave/issues"
+  },
+  "homepage": "https://github.com/gefjon/vaporwave#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1"
+  }
+}
