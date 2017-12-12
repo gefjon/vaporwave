@@ -1,0 +1,130 @@
+$light-grey: #c3c3c3;
+$dark-blue: #000082;
+$dark-grey: #828282;
+$wallpaper-teal: #008282;
+
+$main-font: "Arial", sans-serif;
+
+.window-border {
+    position: absolute;
+    border-left:2px solid $light-grey;
+    border-top:2px solid $light-grey;
+    border-bottom:2px solid #000000;
+    border-right:2px solid #000000;
+    display:inline-block;
+    
+    .window {
+        background-color: $light-grey;
+        border-left:2px solid #ffffff;
+        border-top:2px solid #ffffff;
+        border-bottom:2px solid $dark-grey;
+        border-right:2px solid $dark-grey;
+        padding:2px;
+
+        .window-title {
+            background-color: $dark-blue;
+            height:28px;
+            padding:4px;
+            .window-title-text {
+                line-height:28px;
+                vertical-align:central;
+                color:#ffffff;
+                display:inline-block;
+                font-family: $main-font;
+                font-weight: bold;
+            }
+            .close-window-button-border {
+                float:right;
+                width:28px;
+                height:24px;
+
+                .close-window-button {
+                    float:right;
+                    width:26px;
+                    height:22px;
+                    line-height:22px;
+                }
+            }
+        }
+        
+        .window-content {
+            width:100%;
+            height:100%;
+            padding: 32px 30px 38px;
+        }
+    }
+}
+
+.button-border {
+    display:inline-block;
+    border-left:2px solid #ffffff;
+    border-top:2px solid #ffffff;
+    border-right:2px solid #000000;
+    border-bottom:2px solid #000000;
+
+    .button {
+        cursor: pointer;
+        display:table;
+        background-color: $light-grey;
+        border-right:2px solid $dark-grey;
+        border-bottom:2px solid $dark-grey;
+        text-align:center;
+
+        .button-text {
+            display:table-cell;
+        }
+    }
+}
+
+
+#body-wrapper {
+    position:absolute;
+    top:0px;
+    left:0px;
+    width:100%;
+    height:100%;
+    background-color: $wallpaper-teal;
+}
+
+.taskbar-border {
+    position:absolute;
+    bottom:0px;
+    left:0px;
+    width:100%;
+    height:54px;
+    border-top:2px solid $light-grey;
+
+    .taskbar {
+        background-color: $light-grey;
+        border-top:2px solid #ffffff;
+        height:52px;
+        padding:4px;
+
+        .start-button {
+            height:30px;
+            padding:4px;
+            .start-button-logo {
+                margin-right: 6px;
+            }
+            .start-button-sub-content {
+                vertical-align: middle;
+                line-height: normal;
+                font-weight: bold;
+            }
+        }
+        .taskbar-button-border {
+            margin:5px;
+
+            .taskbar-button {
+                height:20px;
+                padding:4px;
+                line-height: 20px;
+            }
+        }
+    }
+}
+
+body {
+    overflow:hidden;
+    font-family: $main-font;
+}

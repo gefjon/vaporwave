@@ -10,8 +10,8 @@ clean:
 bin:
 	mkdir bin
 
-bin/script.js: src/vaporwave.ts bin
-	tsc --outfile bin/script.js src/vaporwave.ts
+bin/script.js: src/script/*.js bin
+	browserify src/script/vaporwave.js -o bin/script.js
 
-bin/style.css: src/vaporwave.scss bin
-	sass src/vaporwave.scss bin/style.css
+bin/style.css: src/style/vaporwave.scss bin
+	sass src/style/vaporwave.scss bin/style.css
