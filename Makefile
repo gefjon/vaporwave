@@ -30,7 +30,7 @@ build/browserified.js : $(scripts)/vaporwave.js $(scripts)/*.js build $(bins)/br
 bin/script.js : build/browserified.js bin node_modules/.bin/babel
 	./$(bins)/babel $< -o $@
 
-bin/style.css : $(styles)/vaporwave.scss bin
+bin/style.css : $(styles)/vaporwave.scss $(styles)/*.scss bin
 	sass $< $@
 
 $(bins)/* :

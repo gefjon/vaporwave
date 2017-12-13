@@ -1,0 +1,16 @@
+.sunken-element-border {
+    display:inline-block;
+    border-left:2px solid $dark-grey;
+    border-top:2px solid $dark-grey;
+    border-right:2px solid #ffffff;
+    border-bottom:2px solid #ffffff;
+    .sunken-element {
+        display:table;
+        background-color: $light-grey;
+        text-align:center;
+        .sunken-element-text {
+            display:table-cell;
+        }
+    }
+}
+ 

@@ -1,0 +1,41 @@
+.taskbar-border {
+    position:absolute;
+    bottom:0px;
+    left:0px;
+    width:100%;
+    height:54px;
+    border-top:2px solid $light-grey;
+
+    .taskbar {
+        background-color: $light-grey;
+        border-top:2px solid #ffffff;
+        height:52px;
+        padding:4px;
+        width:100%;
+
+        .start-button {
+            height:30px;
+            padding:4px;
+            .start-button-logo {
+                margin-right: 6px;
+            }
+            .start-button-sub-content {
+                vertical-align: middle;
+                line-height: normal;
+                font-weight: bold;
+            }
+        }
+        .taskbar-button-border {
+            margin-left: 4px;
+            width: 210px;
+            .taskbar-button {
+                height:30px;
+                width: 200px;
+                padding:4px;
+                line-height: 30px;
+                text-align:left;
+            }
+        }
+        @import 'clock';
+    }
+}

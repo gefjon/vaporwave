@@ -1,0 +1,17 @@
+.clock-border {
+    float:right;
+    margin-right:8px;
+    width:110px;
+    height:40px;
+    .clock {
+        width:100px;
+        height:30px;
+        padding:4px;
+        line-height:30px;
+        vertical-align:middle;
+        .clock-text {
+            font-weight: normal;
+            text-align:center;
+        }
+    }
+}

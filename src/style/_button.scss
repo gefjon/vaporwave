@@ -1,0 +1,20 @@
+.button-border {
+    display:inline-block;
+    border-left:2px solid #ffffff;
+    border-top:2px solid #ffffff;
+    border-right:2px solid #000000;
+    border-bottom:2px solid #000000;
+
+    .button {
+        cursor: pointer;
+        display:table;
+        background-color: $light-grey;
+        border-right:2px solid $dark-grey;
+        border-bottom:2px solid $dark-grey;
+        text-align:center;
+
+        .button-text {
+            display:table-cell;
+        }
+    }
+}
