@@ -1,20 +1,20 @@
 .button-border {
-    display:inline-block;
-    border-left:2px solid #ffffff;
-    border-top:2px solid #ffffff;
-    border-right:2px solid #000000;
-    border-bottom:2px solid #000000;
+    display: inline-block;
+    border-left: 0.2vw solid #ffffff;
+    border-top: 0.2vh solid #ffffff;
+    border-right: 0.2vw solid #000000;
+    border-bottom: 0.2vh solid #000000;
 
     .button {
         cursor: pointer;
-        display:table;
+        display: table;
         background-color: $light-grey;
-        border-right:2px solid $dark-grey;
-        border-bottom:2px solid $dark-grey;
-        text-align:center;
+        border-right: 0.2vw solid $dark-grey;
+        border-bottom: 0.2vh solid $dark-grey;
+        text-align: center;
 
         .button-text {
-            display:table-cell;
+            display: table-cell;
         }
     }
 }
