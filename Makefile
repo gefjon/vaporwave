@@ -1,27 +1,37 @@
 ifndef BABEL_ENV
 $(info Using BABEL_ENV=development)
-export BABEL_ENV = "development"
+export BABEL_ENV = development
 else
 export BABEL_ENV
 endif
 
+scripts = src/script
+styles = src/style
+bins = node_modules/.bin
+
 .DEFAULT_GOAL := all
 
-.PHONY: all
-all: bin/style.css bin/script.js
+.PHONY : all
+all : bin/style.css bin/script.js
 
-.PHONY: clean
-clean:
-	rm -rf bin
+.PHONY : clean
+clean :
+	rm -rf bin build
 
-bin:
+build :
+	mkdir build
+
+bin :
 	mkdir bin
 
-bin/script.js: src/script/*.js bin node_modules/.bin/babel
-	./node_modules/.bin/babel src/script/vaporwave.js -o bin/script.js
+build/browserified.js : $(scripts)/vaporwave.js $(scripts)/*.js build $(bins)/browserify
+	./$(bins)/browserify $< -o $@
 
-bin/style.css: src/style/vaporwave.scss bin
-	sass src/style/vaporwave.scss bin/style.css
+bin/script.js : build/browserified.js bin node_modules/.bin/babel
+	./$(bins)/babel $< -o $@
 
-node_modules/.bin/babel :
+bin/style.css : $(styles)/vaporwave.scss bin
+	sass $< $@
+
+$(bins)/* :
 	npm install
