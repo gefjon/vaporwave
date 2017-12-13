@@ -1,15 +1,15 @@
 .sunken-element-border {
-    display: inline-block;
-    border-left: 0.2vw solid $dark-grey;
-    border-top: 0.2vh solid $dark-grey;
-    border-right: 0.2vw solid #ffffff;
-    border-bottom: 0.2vh solid #ffffff;
+    display:inline-block;
+    border-left:2px solid $dark-grey;
+    border-top:2px solid $dark-grey;
+    border-right:2px solid #ffffff;
+    border-bottom:2px solid #ffffff;
     .sunken-element {
-        display: table;
+        display:table;
         background-color: $light-grey;
-        text-align: center;
+        text-align:center;
         .sunken-element-text {
-            display: table-cell;
+            display:table-cell;
         }
     }
 }

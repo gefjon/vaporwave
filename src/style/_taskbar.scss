@@ -1,47 +1,39 @@
 .taskbar-border {
-    position: absolute;
-    bottom: 0vmin;
-    left: 0vmin;
-    width: 100%;
-    height: 5.4vh;
-    border-top: 0.2vh solid $light-grey;
+    position:absolute;
+    bottom:0px;
+    left:0px;
+    width:100%;
+    height:54px;
+    border-top:2px solid $light-grey;
 
     .taskbar {
         background-color: $light-grey;
-        border-top: 0.2vh solid #ffffff;
-        height: 5.2vh;
-        padding: 0.4vmin;
-        width: 100%;
-        
-        .start-button-border {
-            width: 9vw;
-            .start-button {
-                width: 8.2vw;
-                height: 3vh;
-                padding: 0.4vmin;
-                .start-button-logo {
-                    margin-right: 0.6vw;
-                }
-                .start-button-sub-content {
-                    vertical-align: middle;
-                    line-height: normal;
-                    font-weight: bold;
-                }
-                .start-button-logo {
-                    height: 2.8vh;
-                    width: 2.8vh;
-                }
+        border-top:2px solid #ffffff;
+        height:52px;
+        padding:4px;
+        width:100%;
+
+        .start-button {
+            height:30px;
+            padding:4px;
+            .start-button-logo {
+                margin-right: 6px;
+            }
+            .start-button-sub-content {
+                vertical-align: middle;
+                line-height: normal;
+                font-weight: bold;
             }
         }
         .taskbar-button-border {
-            margin-left: 0.4vw;
-            width: 21vw;
+            margin-left: 4px;
+            width: 210px;
             .taskbar-button {
-                height: 3vh;
-                width: 20.2vw;
-                padding: 0.4vmin;
-                line-height: 3vh;
-                text-align: left;
+                height:30px;
+                width: 200px;
+                padding:4px;
+                line-height: 30px;
+                text-align:left;
             }
         }
         @import 'clock';
