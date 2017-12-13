@@ -12,21 +12,25 @@
         height: 5.2vh;
         padding: 0.4vmin;
         width: 100%;
-
-        .start-button {
-            height: 3vh;
-            padding: 0.4vmin;
-            .start-button-logo {
-                margin-right: 0.6vw;
-            }
-            .start-button-sub-content {
-                vertical-align: middle;
-                line-height: normal;
-                font-weight: bold;
-            }
-            .start-button-logo {
-                height: 2.8vh;
-                width: 2.8vh;
+        
+        .start-button-border {
+            width: 9vw;
+            .start-button {
+                width: 8.2vw;
+                height: 3vh;
+                padding: 0.4vmin;
+                .start-button-logo {
+                    margin-right: 0.6vw;
+                }
+                .start-button-sub-content {
+                    vertical-align: middle;
+                    line-height: normal;
+                    font-weight: bold;
+                }
+                .start-button-logo {
+                    height: 2.8vh;
+                    width: 2.8vh;
+                }
             }
         }
         .taskbar-button-border {
@@ -34,7 +38,7 @@
             width: 21vw;
             .taskbar-button {
                 height: 3vh;
-                width: 20.4vw;
+                width: 20.2vw;
                 padding: 0.4vmin;
                 line-height: 3vh;
                 text-align: left;

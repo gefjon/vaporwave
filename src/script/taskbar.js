@@ -49,7 +49,28 @@ function MakeClock () {
   utils.addClasses(textEl, ['clock-text'])
   innerEl.appendChild(textEl)
   let clock = Clock(el, textEl)
-  textEl.appendChild(document.createTextNode('2:38 PM'))
+  let textNode = document.createTextNode('2:38 PM')
+  textEl.appendChild(textNode)
+
+  let updateClock = () => {
+    let now = new Date()
+    textEl.removeChild(textNode)
+    let hour = now.getHours()
+    let halfOfDay = (hour >= 12) ? 'PM' : 'AM'
+    hour = hour % 12
+    if (hour === 0) {
+      hour = 12
+    }
+    let minutes = now.getMinutes()
+    if (minutes < 10) {
+      minutes = '0' + minutes
+    }
+    textNode =
+      document.createTextNode(`${hour}:${minutes} ${halfOfDay}`)
+    textEl.appendChild(textNode)
+  }
+  window.setInterval(updateClock, 5000)
+  updateClock()
 
   return clock
 }
