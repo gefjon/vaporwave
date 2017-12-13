@@ -3,8 +3,8 @@ $dark-blue: #000082;
 $dark-grey: #828282;
 $wallpaper-teal: #008282;
 
-$main-font: "Arial", sans-serif;
-
+$main-font-stack: "Arial", arial, "Helvetica", helvetica, sans-serif;
+$main-font: normal normal lighter medium $main-font-stack;
 @import 'window';
 
 @import 'button';
@@ -26,5 +26,6 @@ body {
     margin:0vmin;
     padding:0vmin;
     overflow:hidden;
-    font-family: $main-font;
+    font: $main-font;
+    
 }

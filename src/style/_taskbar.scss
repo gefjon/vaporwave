@@ -24,13 +24,17 @@
                 line-height: normal;
                 font-weight: bold;
             }
+            .start-button-logo {
+                height: 2.8vh;
+                width: 2.8vh;
+            }
         }
         .taskbar-button-border {
-            margin-left: 4vw;
-            width: 210vw;
+            margin-left: 0.4vw;
+            width: 21vw;
             .taskbar-button {
-                height: 30vh;
-                width: 20vw;
+                height: 3vh;
+                width: 20.4vw;
                 padding: 0.4vmin;
                 line-height: 3vh;
                 text-align: left;
