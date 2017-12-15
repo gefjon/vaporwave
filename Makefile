@@ -1,5 +1,4 @@
 ifndef BABEL_ENV
-$(info Using BABEL_ENV=development)
 export BABEL_ENV = development
 else
 export BABEL_ENV
@@ -17,6 +16,10 @@ all : bin/style.css bin/script.js
 .PHONY : clean
 clean :
 	rm -rf bin build
+
+.PHONY : release
+release : clean
+	BABEL_ENV=release make all
 
 build :
 	mkdir build
