@@ -1,11 +1,12 @@
-const utils = require('./utils.js')
-const button = require('./button.js')
-const windowsLogoUri = '/assets/win95logo.png'
-const windowsLogoBigUri = '/assets/win95logo2x.png'
+import * as utils from './utils'
+import Button from './button'
 
-module.exports = {
-  MakeTaskbar
-}
+// const windowsLogoUri = '/assets/win95logo.png'
+import windowsLogoBigUri from '../assets/win95logo2x.png'
+
+import '../style/taskbar.scss'
+
+import '../style/sunken-element.scss'
 
 function Taskbar (el, innerEl, clock) {
   return {
@@ -22,7 +23,7 @@ function Taskbar (el, innerEl, clock) {
     addButtonForWindow: function (window) {
       let contents = document.createElement('div')
       contents.appendChild(document.createTextNode(window.title))
-      let buttonEl = button.MakeButton(
+      let buttonEl = Button(
         contents,
         e => window.toggleDisplay(),
         'taskbar-'
@@ -77,7 +78,7 @@ function MakeClock () {
 function makeStartButton () {
   let contents = document.createElement('div')
 
-  let logo = document.createElement('img')
+  let logo = new Image()
   logo.src = windowsLogoBigUri
   logo.alt = 'Windows 95 logo'
   utils.addClasses(logo, ['start-button-logo', 'start-button-sub-content'])
@@ -89,10 +90,10 @@ function makeStartButton () {
   contents.appendChild(logo)
   contents.appendChild(text)
 
-  return button.MakeButton(contents, undefined, 'start-')
+  return Button(contents, undefined, 'start-')
 }
 
-function MakeTaskbar (parent) {
+export default function MakeTaskbar (parent) {
   let el = utils.divWithClass('taskbar-border')
   let innerEl = utils.divWithClass('taskbar')
   el.appendChild(innerEl)

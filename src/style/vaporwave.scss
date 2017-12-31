@@ -1,17 +1,6 @@
-$light-grey: #c3c3c3;
-$dark-blue: #000082;
-$dark-grey: #828282;
-$wallpaper-teal: #008282;
+@import 'colors';
 
-$main-font-stack: "Arial", arial, "Helvetica", helvetica, sans-serif;
-$main-font: normal normal lighter medium $main-font-stack;
-@import 'window';
-
-@import 'button';
-
-@import 'sunken-element';
-
-@import 'taskbar';
+@import 'font';
 
 #body-wrapper {
     position:absolute;
@@ -25,5 +14,8 @@ $main-font: normal normal lighter medium $main-font-stack;
 body {
     overflow:hidden;
     font: $main-font;
-    
+}
+
+#window-contents {
+    display:none;
 }

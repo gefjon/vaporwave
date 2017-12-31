@@ -1,13 +1,11 @@
 {
   "name": "vaporwave",
   "version": "0.0.1",
-  "description": "This project uses [Typescript](https://www.typescriptlang.org/index.html), [Sass](http://sass-lang.com/) plus [Gnu Make](https://www.gnu.org/software/make/) to handle compilation.",
+  "description": "no description available",
   "main": "none",
-  "bin": {
-    "vaporwave": "script.js"
-  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "standard",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
@@ -18,10 +16,21 @@
   "bugs": {
     "url": "https://github.com/gefjon/vaporwave/issues"
   },
+  "standard": {
+    "ignore": [
+      "/bin/"
+    ]
+  },
   "homepage": "https://github.com/gefjon/vaporwave#readme",
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.6.1",
-    "browserify": "^14.5.0"
+    "css-loader": "^0.28.7",
+    "node-sass": "^4.7.2",
+    "sass-loader": "^6.0.6",
+    "standard": "^10.0.3",
+    "style-loader": "^0.19.1",
+    "url-loader": "^0.6.2",
+    "webpack": "^3.10.0"
   }
 }

@@ -1,18 +1,15 @@
-const utils = require('./utils.js')
-const button = require('./button.js')
+import * as utils from './utils'
+import Button from './button'
 
-module.exports = {
-  Win95WindowFromContents,
-  Win95Window
-}
+import '../style/window.scss'
 
 function CloseWindowButton (parent) {
   let contents = document.createElement('span')
   contents.appendChild(document.createTextNode('x'))
-  return button.MakeButton(contents, e => parent.toggleDisplay(), 'close-window-')
+  return Button(contents, e => parent.toggleDisplay(), 'close-window-')
 }
 
-function Win95Window (el, title) {
+export function New (el, title) {
   return {
     el,
     title,
@@ -26,7 +23,7 @@ function Win95Window (el, title) {
   }
 }
 
-function Win95WindowFromContents (
+export function fromContents (
   upperLeft,
   dimensions,
   title,
@@ -37,7 +34,7 @@ function Win95WindowFromContents (
   let el = utils.divWithClass('window-border')
   utils.setElementPos(el, upperLeft)
 
-  let win95Window = Win95Window(el, title)
+  let win95Window = New(el, title)
 
   let innerEl = utils.divWithClass('window')
   utils.setElementDimensions(innerEl, dimensions)

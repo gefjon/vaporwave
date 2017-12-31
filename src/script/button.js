@@ -1,11 +1,10 @@
-let utils = require('./utils.js')
+import * as utils from './utils'
 
-module.exports = {
-  Button,
-  MakeButton
-}
+import '../style/button.scss'
 
-function Button (el) {
+export default MakeButton
+
+function ButtonStruct (el) {
   return {
     el
   }
@@ -25,5 +24,5 @@ function MakeButton (contents, click = undefined, prefix = undefined) {
   }
   innerEl.appendChild(contents)
   el.appendChild(innerEl)
-  return Button(el)
+  return ButtonStruct(el)
 }

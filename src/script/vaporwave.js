@@ -1,17 +1,24 @@
-const utils = require('./utils.js')
-const win95window = require('./win95window.js')
-const taskbar = require('./taskbar.js')
+import * as utils from './utils'
+import * as Win95Window from './win95window'
+import Taskbar from './taskbar'
+
+import '../style/vaporwave.scss'
 
 window.onload = e => {
   let body = document.getElementById('body-wrapper')
-  let taskbarEl = taskbar.MakeTaskbar(body)
+  let taskbar = Taskbar(body)
 
-  let myWindow = win95window.Win95WindowFromContents(
-    utils.Pos(30, 30),
-    utils.Pos(500, 500),
-    'Window title',
-    utils.divWithClass('foo'),
-    body,
-    taskbarEl
-  )
+  let elems = document.getElementById('window-contents').children
+  for (let i = 0; i < elems.length; i++) {
+    console.log('iterating')
+    Win95Window.fromContents(
+      utils.Pos(30 * i, 30 * i),
+      utils.Pos(500, 500),
+      'Window title',
+      elems[i],
+      body,
+      taskbar
+    )
+    i += 1
+  }
 }
