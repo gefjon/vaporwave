@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAKA,aAAc;EACV,QAAQ,EAAC,QAAQ;EACjB,GAAG,EAAC,GAAG;EACP,IAAI,EAAC,GAAG;EACR,KAAK,EAAC,IAAI;EACV,MAAM,EAAC,IAAI;EACX,gBAAgB,ECRH,OAAO;;ADWxB,IAAK;EACD,QAAQ,EAAC,MAAM;EACf,IAAI,EAfI,+EAA6C;;AAkBzD,gBAAiB;EACb,OAAO,EAAC,IAAI",
-"sources": ["../src/style/vaporwave.scss","../src/style/_colors.scss"],
-"names": [],
-"file": "style.css"
-}

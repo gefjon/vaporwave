@@ -8,6 +8,8 @@ import '../style/taskbar.scss'
 
 import '../style/sunken-element.scss'
 
+/* globals Image */
+
 function Taskbar (el, innerEl, clock) {
   return {
     el,

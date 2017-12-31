@@ -5,7 +5,7 @@ import Taskbar from './taskbar'
 import '../style/vaporwave.scss'
 
 window.onload = e => {
-  let body = document.getElementById('body-wrapper')
+  let body = document.getElementsByTagName('body')[0]
   let taskbar = Taskbar(body)
 
   let elems = document.getElementById('window-contents').children

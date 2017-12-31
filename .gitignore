@@ -1,4 +1,3 @@
 .sass-cache
-bin
-build
+dist
 node_modules

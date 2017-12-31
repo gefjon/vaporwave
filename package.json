@@ -16,6 +16,11 @@
   "bugs": {
     "url": "https://github.com/gefjon/vaporwave/issues"
   },
+  "jshintConfig": {
+    "globals": {
+      "Image": true
+    }
+  },
   "standard": {
     "ignore": [
       "/bin/"
@@ -26,6 +31,7 @@
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "css-loader": "^0.28.7",
+    "html-webpack-plugin": "^2.30.1",
     "node-sass": "^4.7.2",
     "sass-loader": "^6.0.6",
     "standard": "^10.0.3",
